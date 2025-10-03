@@ -16,56 +16,149 @@ class _HomeScreenState extends State<HomeScreen> {
 final List<Match> _allMatches = [
   // == Pertandingan Sedang Berlangsung (Live) ==
   Match(
-    team1Name: 'Liverpool', team1Logo: 'assets/images/barcelona2025.png',
-    team2Name: 'Real Madrid', team2Logo: 'assets/images/barcelona2025.png',
-    team1Score: 1, team2Score: 0, matchTime: '75:10', // Live
-    league: 'UEFA Champions League', odds1: '1.50', oddsX: '4.5', odds2: '5.00',
-    matchImage: 'assets/images/m1.png', isLive: true,
+    team1Name: 'BAR', // Barcelona
+    team1Logo: 'assets/images/bar.png',
+    team2Name: 'PSG', // Paris Saint-Germain
+    team2Logo: 'assets/images/psg.png',
+    team1Score: 2,
+    team2Score: 1,
+    matchTime: '72:18', // Live
+    league: 'UEFA Champions League - Quarter Final',
+    odds1: '2.05',
+    oddsX: '3.6',
+    odds2: '3.50',
+    matchImage: 'assets/images/m1.png',
+    isLive: true,
   ),
   Match(
-    team1Name: 'AC Milan', team1Logo: 'assets/images/barcelona2025.png',
-    team2Name: 'Inter Milan', team2Logo: 'assets/images/barcelona2025.png',
-    team1Score: 0, team2Score: 0, matchTime: '30:55', // Live
-    league: 'Serie A', odds1: '3.10', oddsX: '3.2', odds2: '2.40',
-    matchImage: 'assets/images/barcelona2025.png', isLive: true,
+    team1Name: 'MCI', // Manchester City
+    team1Logo: 'assets/images/mc.png',
+    team2Name: 'ARS', // Arsenal
+    team2Logo: 'assets/images/ars.png',
+    team1Score: 0,
+    team2Score: 0,
+    matchTime: '40:11', // Live
+    league: 'Premier League',
+    odds1: '1.95',
+    oddsX: '3.4',
+    odds2: '3.80',
+    matchImage: 'assets/images/barcelona2025.png',
+    isLive: true,
   ),
 
   // == Pertandingan Selesai (Full Time) ==
   Match(
-    team1Name: 'Barcelona', team1Logo: 'assets/images/barcelona2025.png',
-    team2Name: 'Real Madrid', team2Logo: 'assets/images/barcelona2025.png',
-    team1Score: 3, team2Score: 2, matchTime: 'Full Time', // Selesai (BARU - El Clásico)
-    league: 'La Liga', odds1: '2.40', oddsX: '3.6', odds2: '2.80',
+    team1Name: 'RMA', // Real Madrid
+    team1Logo: 'assets/images/barcelona2025.png',
+    team2Name: 'MCI', // Manchester City
+    team2Logo: 'assets/images/mc.png',
+    team1Score: 3,
+    team2Score: 2,
+    matchTime: 'Full Time', // Selesai
+    league: 'UEFA Champions League - Round of 16',
+    odds1: '2.40',
+    oddsX: '3.2',
+    odds2: '2.90',
     matchImage: 'assets/images/barcelona2025.png',
   ),
   Match(
-    team1Name: 'Bayern Munich', team1Logo: 'assets/images/barcelona2025.png',
-    team2Name: 'PSG', team2Logo: 'assets/images/barcelona2025.png',
-    team1Score: 2, team2Score: 0, matchTime: 'Full Time', // Selesai
-    league: 'UEFA Champions League', odds1: '1.90', oddsX: '3.8', odds2: '3.50',
+    team1Name: 'BAY', // Bayern Munich
+    team1Logo: 'assets/images/mun.png',
+    team2Name: 'INT', // Inter Milan
+    team2Logo: 'assets/images/barcelona2025.png',
+    team1Score: 2,
+    team2Score: 0,
+    matchTime: 'Full Time', // Selesai
+    league: 'UEFA Champions League - Quarter Final',
+    odds1: '1.90',
+    oddsX: '3.5',
+    odds2: '3.80',
     matchImage: 'assets/images/barcelona2025.png',
   ),
-   Match(
-    team1Name: 'Juventus', team1Logo: 'assets/images/barcelona2025.png',
-    team2Name: 'Napoli', team2Logo: 'assets/images/barcelona2025.png',
-    team1Score: 1, team2Score: 1, matchTime: 'Full Time', // Selesai
-    league: 'Serie A', odds1: '2.60', oddsX: '3.1', odds2: '2.75',
+  Match(
+    team1Name: 'LVP', // Liverpool
+    team1Logo: 'assets/images/barcelona2025.png',
+    team2Name: 'NAP', // Napoli
+    team2Logo: 'assets/images/barcelona2025.png',
+    team1Score: 4,
+    team2Score: 3,
+    matchTime: 'Full Time', // Selesai
+    league: 'UEFA Champions League - Round of 16',
+    odds1: '2.20',
+    oddsX: '3.3',
+    odds2: '3.10',
+    matchImage: 'assets/images/barcelona2025.png',
+  ),
+  Match(
+    team1Name: 'ESP', // Spain
+    team1Logo: 'assets/images/barcelona2025.png',
+    team2Name: 'POR', // Portugal
+    team2Logo: 'assets/images/barcelona2025.png',
+    team1Score: 2,
+    team2Score: 1,
+    matchTime: 'Full Time', // Selesai
+    league: 'UEFA Nations League 2025',
+    odds1: '2.30',
+    oddsX: '3.3',
+    odds2: '2.90',
+    matchImage: 'assets/images/barcelona2025.png',
+  ),
+  Match(
+    team1Name: 'ARG', // Argentina
+    team1Logo: 'assets/images/barcelona2025.png',
+    team2Name: 'BRA', // Brazil
+    team2Logo: 'assets/images/barcelona2025.png',
+    team1Score: 3,
+    team2Score: 2,
+    matchTime: 'Full Time', // Selesai
+    league: 'Copa America 2025',
+    odds1: '2.40',
+    oddsX: '3.1',
+    odds2: '2.80',
     matchImage: 'assets/images/barcelona2025.png',
   ),
 
   // == Pertandingan Akan Datang (Upcoming) ==
   Match(
-    team1Name: 'Man City', team1Logo: 'assets/images/barcelona2025.png',
-    team2Name: 'Arsenal', team2Logo: 'assets/images/barcelona2025.png',
-    team1Score: 0, team2Score: 0, matchTime: '05 Okt 21:00', // Akan Datang
-    league: 'Premier League', odds1: '1.75', oddsX: '4.0', odds2: '4.20',
+    team1Name: 'BAR', // Barcelona
+    team1Logo: 'assets/images/bar.png',
+    team2Name: 'RMA', // Real Madrid
+    team2Logo: 'assets/images/barcelona2025.png',
+    team1Score: 0,
+    team2Score: 0,
+    matchTime: '26 Okt 21:00', // Akan Datang
+    league: 'La Liga - El Clásico',
+    odds1: '2.20',
+    oddsX: '3.5',
+    odds2: '2.80',
     matchImage: 'assets/images/barcelona2025.png',
   ),
   Match(
-    team1Name: 'Dortmund', team1Logo: 'assets/images/barcelona2025.png',
-    team2Name: 'Man United', team2Logo: 'assets/images/barcelona2025.png',
-    team1Score: 0, team2Score: 0, matchTime: '08 Okt 02:00', // Akan Datang
-    league: 'UEFA Champions League', odds1: '2.50', oddsX: '3.1', odds2: '2.90',
+    team1Name: 'DOR', // Borussia Dortmund
+    team1Logo: 'assets/images/dortmund.png',
+    team2Name: 'JUV', // Juventus
+    team2Logo: 'assets/images/barcelona2025.png',
+    team1Score: 0,
+    team2Score: 0,
+    matchTime: '02 Nov 02:00', // Akan Datang
+    league: 'UEFA Champions League - Quarter Final',
+    odds1: '2.60',
+    oddsX: '3.1',
+    odds2: '2.70',
+    matchImage: 'assets/images/barcelona2025.png',
+  ),
+  Match(
+    team1Name: 'MUN', // Manchester United
+    team1Logo: 'assets/images/mu.png',
+    team2Name: 'CHE', // Chelsea
+    team2Logo: 'assets/images/barcelona2025.png',
+    team1Score: 0,
+    team2Score: 0,
+    matchTime: '05 Nov 22:30', // Akan Datang
+    league: 'Premier League',
+    odds1: '2.40',
+    oddsX: '3.0',
+    odds2: '2.90',
     matchImage: 'assets/images/barcelona2025.png',
   ),
 ];
@@ -201,8 +294,8 @@ final List<Match> _allMatches = [
           const SizedBox(height: 20),
           // --- MENAMPILKAN SETIAP SECTION ---
           _buildMatchSection('Live Matches', liveMatches),
-          _buildMatchSection('Full Time', fullTimeMatches),
           _buildMatchSection('Upcoming Matches', upcomingMatches),
+          _buildMatchSection('Full Time', fullTimeMatches),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
