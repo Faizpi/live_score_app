@@ -20,13 +20,13 @@ class MatchDetailScreen extends StatelessWidget {
 
           // Lapis 2: Konten yang Bisa di-scroll (ditempatkan di atas latar belakang)
           _buildScrollableContent(context),
-          
+
           // Lapis 3: Tombol Pause yang juga statis posisinya
           // Tampilkan tombol pause hanya jika pertandingan Live
           if (match.isLive)
             Positioned(
               // Posisikan sekitar 3/4 dari area header
-              top: 320, 
+              top: 320,
               left: 0,
               right: 0,
               child: Center(
@@ -88,9 +88,18 @@ class MatchDetailScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 16.0),
                 child: Center(
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                    decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(20)),
-                    child: const Text('Live', style: TextStyle(fontWeight: FontWeight.bold)),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 6,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: const Text(
+                      'Live',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
               ),
@@ -111,26 +120,46 @@ class MatchDetailScreen extends StatelessWidget {
                 GlassmorphicContainer(
                   child: Column(
                     children: [
-                      Text(match.league, style: TextStyle(color: AppColors.textGrey, fontSize: 14)),
+                      Text(
+                        match.league,
+                        style: TextStyle(
+                          color: AppColors.textGrey,
+                          fontSize: 14,
+                        ),
+                      ),
                       const SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          TeamDisplay(name: match.team1Name, logo: match.team1Logo),
+                          TeamDisplay(
+                            name: match.team1Name,
+                            logo: match.team1Logo,
+                          ),
                           Column(
                             children: [
-                              Text('${match.team1Score} - ${match.team2Score}', style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
+                              Text(
+                                '${match.team1Score} - ${match.team2Score}',
+                                style: const TextStyle(
+                                  fontSize: 40,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                               const SizedBox(height: 4),
                               Text(
                                 match.matchTime,
                                 style: TextStyle(
-                                  color: match.isLive ? Colors.red : AppColors.textGrey,
+                                  color: match.isLive
+                                      ? Colors.red
+                                      : AppColors.textGrey,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ],
                           ),
-                          TeamDisplay(name: match.team2Name, logo: match.team2Logo),
+                          TeamDisplay(
+                            name: match.team2Name,
+                            logo: match.team2Logo,
+                          ),
                         ],
                       ),
                     ],
@@ -158,7 +187,7 @@ class MatchDetailScreen extends StatelessWidget {
 
 // Helper Widgets (TeamDisplay & OddsButton) tidak ada perubahan
 class TeamDisplay extends StatelessWidget {
-    // ... kode sama seperti sebelumnya
+  // ... kode sama seperti sebelumnya
   final String name;
   final String logo;
   const TeamDisplay({super.key, required this.name, required this.logo});
@@ -169,14 +198,17 @@ class TeamDisplay extends StatelessWidget {
       children: [
         Image.asset(logo, width: 60, height: 60),
         const SizedBox(height: 8),
-        Text(name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+        Text(
+          name,
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+        ),
       ],
     );
   }
 }
 
 class OddsButton extends StatelessWidget {
-    // ... kode sama seperti sebelumnya
+  // ... kode sama seperti sebelumnya
   final String label;
   final String value;
   const OddsButton({super.key, required this.label, required this.value});
@@ -191,9 +223,15 @@ class OddsButton extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Text(label, style: TextStyle(color: AppColors.textGrey, fontSize: 16)),
+          Text(
+            label,
+            style: TextStyle(color: AppColors.textGrey, fontSize: 16),
+          ),
           const SizedBox(height: 4),
-          Text(value, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+          Text(
+            value,
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          ),
         ],
       ),
     );

@@ -16,7 +16,10 @@ class MatchCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(match.league, style: TextStyle(color: AppColors.textGrey, fontSize: 12)),
+              Text(
+                match.league,
+                style: TextStyle(color: AppColors.textGrey, fontSize: 12),
+              ),
               Icon(Icons.star_border, color: AppColors.textGrey, size: 20),
             ],
           ),
@@ -32,27 +35,46 @@ class MatchCard extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(
-                        match.isLive ? '${match.team1Score} - ${match.team2Score}' : 'vs',
-                        style: const TextStyle(fontSize: 32, fontWeight: FontWeight.w600),
+                        match.isLive
+                            ? '${match.team1Score} - ${match.team2Score}'
+                            : 'vs',
+                        style: const TextStyle(
+                          fontSize: 32,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                       const SizedBox(height: 4),
                       if (match.isLive)
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                             Container(
-                              width: 8, height: 8,
-                              decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.red),
+                            Container(
+                              width: 8,
+                              height: 8,
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.red,
+                              ),
                             ),
                             const SizedBox(width: 6),
                             Text(
                               match.matchTime,
-                              style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontSize: 12),
+                              style: const TextStyle(
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
                             ),
                           ],
                         )
                       else
-                        Text(match.matchTime, style: TextStyle(color: AppColors.textGrey, fontSize: 12)),
+                        Text(
+                          match.matchTime,
+                          style: TextStyle(
+                            color: AppColors.textGrey,
+                            fontSize: 12,
+                          ),
+                        ),
                     ],
                   ),
                 ),
@@ -71,7 +93,7 @@ class MatchCard extends StatelessWidget {
               OddsDisplay(label: 'X', value: match.oddsX),
               OddsDisplay(label: '2', value: match.odds2),
             ],
-          )
+          ),
         ],
       ),
     );
@@ -91,7 +113,11 @@ class TeamDisplay extends StatelessWidget {
         children: [
           Image.asset(logo, width: 45, height: 45),
           const SizedBox(height: 8),
-          Text(name, textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 14)),
+          Text(
+            name,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
+          ),
         ],
       ),
     );
@@ -107,8 +133,14 @@ class OddsDisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text('$label ', style: TextStyle(color: AppColors.textGrey, fontSize: 14)),
-        Text(value, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+        Text(
+          '$label ',
+          style: TextStyle(color: AppColors.textGrey, fontSize: 14),
+        ),
+        Text(
+          value,
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+        ),
       ],
     );
   }

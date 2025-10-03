@@ -53,7 +53,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           // Lapis 2: Konten Teks dan Tombol (STATIS/TIDAK BERGERAK)
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 24.0,
+                vertical: 32.0,
+              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,9 +82,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                       ),
                       SizedBox(width: 12),
-                      Icon(Icons.sports_soccer_outlined, color: Colors.white, size: 28),
+                      Icon(
+                        Icons.sports_soccer_outlined,
+                        color: Colors.white,
+                        size: 28,
+                      ),
                       SizedBox(width: 8),
-                      Icon(Icons.emoji_events_outlined, color: Colors.white, size: 28),
+                      Icon(
+                        Icons.emoji_events_outlined,
+                        color: Colors.white,
+                        size: 28,
+                      ),
                     ],
                   ),
                   const SizedBox(height: 16),
@@ -120,7 +131,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                         ),
                         SizedBox(width: 8),
-                        Icon(Icons.arrow_forward, color: Colors.black, size: 20),
+                        Icon(
+                          Icons.arrow_forward,
+                          color: Colors.black,
+                          size: 20,
+                        ),
                       ],
                     ),
                   ),
