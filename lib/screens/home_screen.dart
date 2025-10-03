@@ -49,7 +49,7 @@ final List<Match> _allMatches = [
   // == Pertandingan Selesai (Full Time) ==
   Match(
     team1Name: 'RMA', // Real Madrid
-    team1Logo: 'assets/images/barcelona2025.png',
+    team1Logo: 'assets/images/md.png',
     team2Name: 'MCI', // Manchester City
     team2Logo: 'assets/images/mc.png',
     team1Score: 3,
@@ -65,7 +65,7 @@ final List<Match> _allMatches = [
     team1Name: 'BAY', // Bayern Munich
     team1Logo: 'assets/images/mun.png',
     team2Name: 'INT', // Inter Milan
-    team2Logo: 'assets/images/barcelona2025.png',
+    team2Logo: 'assets/images/mln.png',
     team1Score: 2,
     team2Score: 0,
     matchTime: 'Full Time', // Selesai
@@ -77,9 +77,9 @@ final List<Match> _allMatches = [
   ),
   Match(
     team1Name: 'LVP', // Liverpool
-    team1Logo: 'assets/images/barcelona2025.png',
+    team1Logo: 'assets/images/lv.png',
     team2Name: 'NAP', // Napoli
-    team2Logo: 'assets/images/barcelona2025.png',
+    team2Logo: 'assets/images/npl.png',
     team1Score: 4,
     team2Score: 3,
     matchTime: 'Full Time', // Selesai
@@ -91,9 +91,9 @@ final List<Match> _allMatches = [
   ),
   Match(
     team1Name: 'ESP', // Spain
-    team1Logo: 'assets/images/barcelona2025.png',
+    team1Logo: 'assets/images/sp.png',
     team2Name: 'POR', // Portugal
-    team2Logo: 'assets/images/barcelona2025.png',
+    team2Logo: 'assets/images/pr.png',
     team1Score: 2,
     team2Score: 1,
     matchTime: 'Full Time', // Selesai
@@ -105,9 +105,9 @@ final List<Match> _allMatches = [
   ),
   Match(
     team1Name: 'ARG', // Argentina
-    team1Logo: 'assets/images/barcelona2025.png',
+    team1Logo: 'assets/images/arg.png',
     team2Name: 'BRA', // Brazil
-    team2Logo: 'assets/images/barcelona2025.png',
+    team2Logo: 'assets/images/br.png',
     team1Score: 3,
     team2Score: 2,
     matchTime: 'Full Time', // Selesai
@@ -123,7 +123,7 @@ final List<Match> _allMatches = [
     team1Name: 'BAR', // Barcelona
     team1Logo: 'assets/images/bar.png',
     team2Name: 'RMA', // Real Madrid
-    team2Logo: 'assets/images/barcelona2025.png',
+    team2Logo: 'assets/images/md.png',
     team1Score: 0,
     team2Score: 0,
     matchTime: '26 Okt 21:00', // Akan Datang
@@ -137,7 +137,7 @@ final List<Match> _allMatches = [
     team1Name: 'DOR', // Borussia Dortmund
     team1Logo: 'assets/images/dortmund.png',
     team2Name: 'JUV', // Juventus
-    team2Logo: 'assets/images/barcelona2025.png',
+    team2Logo: 'assets/images/jv.png',
     team1Score: 0,
     team2Score: 0,
     matchTime: '02 Nov 02:00', // Akan Datang
@@ -151,7 +151,7 @@ final List<Match> _allMatches = [
     team1Name: 'MUN', // Manchester United
     team1Logo: 'assets/images/mu.png',
     team2Name: 'CHE', // Chelsea
-    team2Logo: 'assets/images/barcelona2025.png',
+    team2Logo: 'assets/images/che.png',
     team1Score: 0,
     team2Score: 0,
     matchTime: '05 Nov 22:30', // Akan Datang
