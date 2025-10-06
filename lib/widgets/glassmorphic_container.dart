@@ -26,7 +26,7 @@ class GlassmorphicContainer extends StatelessWidget {
           padding: padding,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(borderRadius),
-            color: const Color(0xFF252E2A).withOpacity(0.6), // Warna dasar kaca
+            color: const Color(0xFF252E2A).withOpacity(0.6), 
             border: Border.all(
               color: Colors.white.withOpacity(0.1),
               width: 1.5,

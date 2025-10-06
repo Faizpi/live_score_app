@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:live_score/main.dart'; // Import AppColors
+import 'package:live_score/main.dart'; 
 import 'package:live_score/models/match_model.dart';
 import 'package:live_score/screens/match_detail_screen.dart';
 import 'package:live_score/widgets/match_card.dart';
@@ -12,7 +12,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // --- DATA PERTANDINGAN BARU YANG LEBIH REALISTIS (MUSIM 2024-2025) ---
   final List<Match> _allMatches = [
     // == Pertandingan Sedang Berlangsung (Live) ==
     Match(
@@ -361,7 +360,6 @@ class SportChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ... (kode SportChip tidak berubah)
     return Padding(
       padding: const EdgeInsets.only(right: 12.0),
       child: Chip(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:live_score/main.dart'; // Import AppColors
+import 'package:live_score/main.dart'; 
 
-// Perubahan: Mengubah menjadi StatefulWidget
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
 
@@ -10,14 +9,12 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  // Data untuk halaman onboarding yang bisa di-slide
   final List<String> onboardingImages = [
     'assets/images/dml.jpeg',
     'assets/images/ly.jpeg',
     'assets/images/dd.jpeg',
   ];
 
-  // Variabel untuk melacak halaman yang sedang aktif
   int _currentPage = 0;
   final PageController _pageController = PageController();
 
@@ -34,23 +31,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // Lapis 1: PageView untuk gambar latar belakang yang bisa di-slide
           PageView.builder(
             controller: _pageController,
             itemCount: onboardingImages.length,
             onPageChanged: (int page) {
-              // Update state saat halaman berubah
               setState(() {
                 _currentPage = page;
               });
             },
             itemBuilder: (context, index) {
-              // Membangun gambar dengan efek fade untuk setiap item
               return _buildFadingImage(onboardingImages[index]);
             },
           ),
 
-          // Lapis 2: Konten Teks dan Tombol (STATIS/TIDAK BERGERAK)
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(
@@ -105,7 +98,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                   ),
                   const SizedBox(height: 32),
-                  // Perubahan: Indikator halaman yang dinamis
                   _buildPageIndicator(),
                   const SizedBox(height: 24),
                   ElevatedButton(
@@ -167,7 +159,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  // Perubahan: Widget ini sekarang menerima path gambar sebagai parameter
   Widget _buildFadingImage(String imagePath) {
     return ShaderMask(
       shaderCallback: (bounds) {
@@ -184,7 +175,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       },
       blendMode: BlendMode.dstIn,
       child: Image.asset(
-        imagePath, // Menggunakan path gambar dari parameter
+        imagePath,
         fit: BoxFit.cover,
         alignment: Alignment.topCenter,
       ),

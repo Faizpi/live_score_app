@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Tema dasar yang akan digunakan di seluruh aplikasi
     final textTheme = Theme.of(context).textTheme;
 
     return MaterialApp(

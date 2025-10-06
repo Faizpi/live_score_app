@@ -10,22 +10,15 @@ class MatchDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Perubahan besar: Menggunakan Stack sebagai dasar layout
     return Scaffold(
       extendBodyBehindAppBar: true,
       body: Stack(
         children: [
-          // Lapis 1: Latar Belakang Gradasi Berkelanjutan (STATIS)
           _buildContinuousBackground(),
-
-          // Lapis 2: Konten yang Bisa di-scroll (ditempatkan di atas latar belakang)
           _buildScrollableContent(context),
 
-          // Lapis 3: Tombol Pause yang juga statis posisinya
-          // Tampilkan tombol pause hanya jika pertandingan Live
           if (match.isLive)
             Positioned(
-              // Posisikan sekitar 3/4 dari area header
               top: 320,
               left: 0,
               right: 0,
@@ -60,12 +53,12 @@ class MatchDetailScreen extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Colors.black.withOpacity(0.6), // Vignette atas
+              Colors.black.withOpacity(0.6), 
               Colors.transparent,
-              AppColors.background.withOpacity(0.8), // Mulai gelap
-              AppColors.background, // Sepenuhnya gelap
+              AppColors.background.withOpacity(0.8), 
+              AppColors.background, 
             ],
-            stops: const [0.0, 0.4, 0.7, 1.0], // Atur titik gradien
+            stops: const [0.0, 0.4, 0.7, 1.0], 
           ),
         ),
       ),
@@ -76,7 +69,6 @@ class MatchDetailScreen extends StatelessWidget {
   Widget _buildScrollableContent(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        // SliverAppBar transparan HANYA untuk tombol kembali & chip Live
         SliverAppBar(
           pinned: true,
           backgroundColor: Colors.transparent,
@@ -108,7 +100,7 @@ class MatchDetailScreen extends StatelessWidget {
 
         // Spacer untuk menciptakan area 'hero image' di bawah AppBar
         const SliverToBoxAdapter(
-          child: SizedBox(height: 450.0), // Beri ruang kosong yang besar
+          child: SizedBox(height: 450.0), 
         ),
 
         // Konten utama (kartu skor & odds)
@@ -187,7 +179,6 @@ class MatchDetailScreen extends StatelessWidget {
 
 // Helper Widgets (TeamDisplay & OddsButton) tidak ada perubahan
 class TeamDisplay extends StatelessWidget {
-  // ... kode sama seperti sebelumnya
   final String name;
   final String logo;
   const TeamDisplay({super.key, required this.name, required this.logo});
@@ -208,7 +199,6 @@ class TeamDisplay extends StatelessWidget {
 }
 
 class OddsButton extends StatelessWidget {
-  // ... kode sama seperti sebelumnya
   final String label;
   final String value;
   const OddsButton({super.key, required this.label, required this.value});
