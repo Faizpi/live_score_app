@@ -20,14 +20,14 @@ class _HomeScreenState extends State<HomeScreen> {
       team1Logo: 'assets/images/bar.png',
       team2Name: 'PSG', // Paris Saint-Germain
       team2Logo: 'assets/images/psg.png',
-      team1Score: 2,
-      team2Score: 1,
+      team1Score: 1,
+      team2Score: 2,
       matchTime: '72:18', // Live
       league: 'UEFA Champions League - Quarter Final',
       odds1: '2.05',
       oddsX: '3.6',
       odds2: '3.50',
-      matchImage: 'assets/images/m1.png',
+      matchImage: 'assets/images/match1.png',
       isLive: true,
     ),
     Match(
@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
       odds1: '1.95',
       oddsX: '3.4',
       odds2: '3.80',
-      matchImage: 'assets/images/barcelona2025.png',
+      matchImage: 'assets/images/match2.png',
       isLive: true,
     ),
 
